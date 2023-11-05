@@ -1,0 +1,67 @@
+﻿@model Usuario
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Home</title>
+    <link rel="stylesheet" href="~/css/Style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PIM_IV_Web.styles.css" asp-append-version="true" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="imagens/Icon monkey.png" />
+            <a href="" id="dashboard">
+                <i class="fi fi-ts-chart-line-up"></i>
+                <span>Visão geral</span>
+            </a>
+            <a href="" id="bancoHora">
+                <i class="fi fi-ts-clock-five"></i>
+                <span>Banco de horas</span>
+            </a>
+            <a href="" id="folhaPagamento">
+                <i class="fi fi-ts-hand-holding-usd"></i>
+                <span>Folha de pagamento</span>
+            </a>
+            <a href="" id="conf">
+                <ion-icon name="settings-outline"></ion-icon>
+                <span>Configurações</span>
+            </a>
+            <a href="" class="leave">
+                <i class="fi fi-rs-exit"></i>
+                <span>Sair</span>
+            </a>
+        </div>
+        <main role="main">
+            @RenderBody()
+        </main>
+        <aside class="sidebar-left">
+            <div>
+                <img src="imagens/Foto de perfil.png" />
+                <h3></h3>
+                <span>Diretor geral</span>
+            </div>
+            <h3>Informações</h3>
+            <a>
+                <i class="fi fi-ts-envelopes"></i>
+                <p></p>
+            </a>
+            <a>
+                <i class="fi fi-ts-phone-call"></i>
+                <p>(11) 8923-9023</p>
+            </a>
+            <div>
+            </div>
+        </aside>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

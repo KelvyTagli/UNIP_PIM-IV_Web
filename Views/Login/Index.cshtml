@@ -1,0 +1,33 @@
+﻿@model Usuario
+@{
+    Layout = "_LayoutDeslogado";
+    ViewData["Title"] = "Login";
+}
+<form asp-controller="Login" asp-action="Entrar" method="post" class="login-screen">
+    <div id="capa" >
+        <img src="./img/310951811_1429855044090289_6182389810660222885_n-removebg-preview(2).png"/>
+    </div>
+    <div class="login-form">
+        <h2>Acesse sua conta</h2>
+        <p>Digite seus dados abaixo para efetuar login</p>
+
+        <input type="email" id="InputEmail" asp-for="Email" placeholder="Email">
+        @Html.ValidationMessageFor(x => x.Email)
+
+        <input type="password" id="InputSenha" asp-for="Senha" placeholder="Senha">
+        @Html.ValidationMessageFor(x => x.Senha)
+
+        <div id="login-recover">
+            <input type="checkbox"/>
+            <a>Lembrar-me</a>
+            <a href="">Esqueceu a senha?</a>
+        </div>
+        <button type="submit" id="button-login">Continuar</button>
+        <div id="login-terms">
+            <p>Ao clicar em continuar,Você concorda com nossos</p>
+            <a href="">Termos de serviço</a>
+            <a>e</a>
+            <a href="">politica de privacidade.</a>
+        </div>
+    </div>
+</form>

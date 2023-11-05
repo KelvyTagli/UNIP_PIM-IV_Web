@@ -1,0 +1,319 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+
+:root {
+    --background: #111213;
+    --border: #4f4f4fce;
+    --primary: #f8f9fc;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    background-color: #201F1F;
+}
+
+.sidebar, .sidebar-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background-color: var(--background);
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid var(--border);
+}
+
+    .sidebar img, .sidebar-left img {
+        margin-top: 25px;
+        width: 40%;
+    }
+
+    .sidebar-left img {
+        border: 5px double #4f4f4fce;
+        width: 120px;
+        height: 120px;
+        border-radius: 80px;
+    }
+
+.leave {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+ion-icon {
+    font-size: 17px;
+    margin-right: 10px;
+    color: var(--primary);
+}
+
+i {
+    font-size: 17px;
+    margin-right: 10px;
+    color: var(--primary);
+}
+
+.sidebar a, .sidebar-left a {
+    display: flex;
+    width: 90%;
+    margin-left: 20px;
+    align-items: center;
+    text-decoration: none;
+    padding: 4px 10px;
+}
+
+.sidebar-left div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #4f4f4fce;
+}
+
+.sidebar-left div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #4f4f4fce;
+}
+
+span, h3, p, h1, h5 {
+    color: white;
+    letter-spacing: 1px;
+    margin: 1%;
+}
+
+.sidebar a:hover {
+    border-radius: 0.5em;
+    border: 1px solid #4f4f4fce;
+    background-color: #2f3237;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    align-items: center;
+    margin-top: 10px;
+    gap: 4em;
+}
+
+    .dashboard div:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+#search {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #4f4f4fce;
+    background-color: #111010;
+    border-radius: 15px;
+    width: 40%;
+}
+
+    #search input {
+        width: 100%;
+        background-color: #111010;
+        color: whitesmoke;
+        border: none;
+        outline: none;
+    }
+
+.graficos {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    padding: 20px;
+    border-radius: .5em;
+    color: var(--primary);
+}
+
+canvas {
+    width: 100%;
+    height: 300px;
+    border-left: 2px solid var(--border);
+    border-bottom: 2px solid var(--border);
+}
+
+.bancoHoras {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    align-items: center;
+    margin-top: 10px;
+    gap: 4em;
+}
+
+    .bancoHoras div:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+.listHours {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--background);
+}
+
+    .listHours i {
+        font-size: 30px;
+    }
+
+#title {
+    color: var(--primary);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+}
+
+.listHours a {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#status {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    border-bottom: 1px solid white;
+}
+
+    #status i {
+        font-size: 20px;
+    }
+
+    #status div:first-child {
+        display: flex;
+        border: none;
+        align-items: center;
+        justify-content: start;
+        gap: 5px;
+    }
+
+    #status div:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding-bottom: 5px;
+    }
+
+.holerite {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 3em;
+    max-width: 100%;
+    padding: 10px;
+}
+
+    .holerite div:first-child {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: .5em;
+    border: 2px solid #4f4f4fce;
+}
+
+    .perfil div {
+        display: flex;
+        width: 100vh;
+    }
+
+    .perfil img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .perfil div:first-child {
+        border-bottom: 1px solid #4f4f4fce;
+        padding-bottom: 10px;
+    }
+
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#info_usuario div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+}
+
+th, td {
+    padding: 5px;
+    color: var(--primary);
+    border-bottom: 1px solid #4f4f4fce;
+    text-align: center;
+}
+
+#result {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 0 10px;
+    border-radius: .5em;
+    border-bottom: 2px solid #4f4f4fce;
+}
+
+    #result div {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 4px;
+    }
+
+
+.hide, .hideBanco, .hideFolha {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
