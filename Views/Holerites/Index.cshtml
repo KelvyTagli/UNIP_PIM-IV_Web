@@ -1,4 +1,6 @@
-﻿<div class="holerite">
+﻿@model Holerite
+
+<div class="holerite">
 	<div>
 		<h1>Folha de pagamento</h1>
 		<div id="search">
@@ -8,24 +10,24 @@
 	</div>
 	<div class="perfil">
 		<div asp-action="Index" asp-controller="DesktopContext">
-			<img src="imagens/Foto de perfil.png" />
+			<img src="./img/Icon monkey.png" />
 			<div id="info">
-				<h3>Alex Hideki</h3>
-				<p></p>
+				<h3>@Model.Funcionario.NomeCompleto</h3>
+				<p>@Model.Funcionario.Email</p>
 			</div>
 		</div>
 		<div id="info_usuario">
 			<div>
 				<h5> Categoria:</h5>
-				<p>Diretor geral</p>
+				<p>@Model.Funcionario.Cargo</p>
 			</div>
 			<div>
 				<h5>Salario previsto:</h5>
-				<p>R$ 4.200</p>
+				<p>R$ @Model.Funcionario.SalarioBase</p>
 			</div>
 			<div>
 				<h5>Status:</h5>
-				<p>Ativo</p>
+				<p>@Model.Funcionario.Ativo</p>
 			</div>
 		</div>
 	</div>
@@ -44,7 +46,7 @@
 				<td>1</td>
 				<td>SALARIO</td>
 				<td>0.00</td>
-				<td>4.200</td>
+				<td>@Model.SalarioBruto</td>
 				<td>R$ 0.00</td>
 			</tr>
 			<tr>
@@ -52,36 +54,36 @@
 				<td>INSS</td>
 				<td>*7,5</td>
 				<td></td>
-				<td>R$ 112,50</td>
+				<td>R$ @Model.Inss</td>
 			</tr>
 			<tr>
 				<td>3</td>
 				<td>FGTS</td>
 				<td>*8.0</td>
 				<td></td>
-				<td>R$ 120.00</td>
+				<td>R$ @Model.Fgts</td>
 			</tr>
 			<tr>
 				<td>4</td>
 				<td>VALE TRANSPORTE</td>
 				<td>22</td>
 				<td></td>
-				<td>R$ 176.00</td>
+				<td>R$ @Model.OutrosDescontos</td>
 			</tr>
 		</tbody>
 	</table>
 	<div id="result">
 		<div>
 			<h4>Total:</h4>
-			<p>4,200</p>
+			<p>@Model.SalarioBruto</p>
 		</div>
 		<div>
 			<h4>Descontos:</h4>
-			<p>408,50</p>
+			<p>@Model.OutrosDescontos</p>
 		</div>
 		<div>
 			<h4>Liquido:</h4>
-			<p>3,791</p>
+			<p>@Model.SalarioLiquido</p>
 		</div>
 	</div>
 </div>

@@ -65,7 +65,7 @@ public partial class Funcionario
 
     public bool? Ativo { get; set; }
 
-    public int? UsuarioId { get; set; }
+    public int UsuarioId { get; set; }
 
     public virtual ICollection<Afastamento> Afastamentos { get; set; } = new List<Afastamento>();
 

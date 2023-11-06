@@ -27,9 +27,7 @@ namespace PIM_IV_Web.Controllers
 
         public Usuario BuscarLogin(string? email)
         {
-#pragma warning disable CS8603 // Possível retorno de referência nula.
             return _dbContext.Usuarios.FirstOrDefault(x => x.Email.ToUpper() == email.ToUpper());
-#pragma warning restore CS8603 // Possível retorno de referência nula.
         }
 
         public IActionResult Leave()

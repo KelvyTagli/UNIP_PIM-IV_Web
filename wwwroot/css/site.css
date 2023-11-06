@@ -33,10 +33,9 @@ body {
 }
 
 #capa img {
-    width: 450px;
+    width: 400px;
     height: 500px;
     margin-top: 1em;
-    text-align:center;
     filter: invert(100%);
 }
 
@@ -54,6 +53,22 @@ body {
     border-radius: .5em;
 }
 
+#border {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    border: 1px solid white;
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    color: black;
+    gap: .3em;
+    border: 1px solid black;
+    border-radius: .5em;
+}
+
 #InputEmail , #InputSenha {
     width: 250px;
     padding: 4px 10px;
@@ -63,7 +78,8 @@ body {
 #login-recover {
     display: flex;
     align-items: center;
-    width:50%;
+    gap:1px;
+    width:70%;
 }
 
 #login-recover a:last-child {
