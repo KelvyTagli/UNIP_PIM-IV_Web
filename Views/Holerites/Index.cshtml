@@ -1,0 +1,87 @@
+﻿<div class="holerite">
+	<div>
+		<h1>Folha de pagamento</h1>
+		<div id="search">
+			<ion-icon name="search-outline"></ion-icon>
+			<input type="text" placeholder="Pesquisar">
+		</div>
+	</div>
+	<div class="perfil">
+		<div asp-action="Index" asp-controller="DesktopContext">
+			<img src="imagens/Foto de perfil.png" />
+			<div id="info">
+				<h3>Alex Hideki</h3>
+				<p></p>
+			</div>
+		</div>
+		<div id="info_usuario">
+			<div>
+				<h5> Categoria:</h5>
+				<p>Diretor geral</p>
+			</div>
+			<div>
+				<h5>Salario previsto:</h5>
+				<p>R$ 4.200</p>
+			</div>
+			<div>
+				<h5>Status:</h5>
+				<p>Ativo</p>
+			</div>
+		</div>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>Codigo</th>
+				<th>Descrição</th>
+				<th>Referência</th>
+				<th>Vencimento</th>
+				<th>Descontos</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>SALARIO</td>
+				<td>0.00</td>
+				<td>4.200</td>
+				<td>R$ 0.00</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>INSS</td>
+				<td>*7,5</td>
+				<td></td>
+				<td>R$ 112,50</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>FGTS</td>
+				<td>*8.0</td>
+				<td></td>
+				<td>R$ 120.00</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>VALE TRANSPORTE</td>
+				<td>22</td>
+				<td></td>
+				<td>R$ 176.00</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="result">
+		<div>
+			<h4>Total:</h4>
+			<p>4,200</p>
+		</div>
+		<div>
+			<h4>Descontos:</h4>
+			<p>408,50</p>
+		</div>
+		<div>
+			<h4>Liquido:</h4>
+			<p>3,791</p>
+		</div>
+	</div>
+</div>

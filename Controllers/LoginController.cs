@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PIM_IV_Web.Models;
+using PIM_IV_Web.Sections;
 
 namespace PIM_IV_Web.Controllers
 {
@@ -9,33 +10,47 @@ namespace PIM_IV_Web.Controllers
 	{
         private readonly DesktopContext _dbContext;
 
-        public LoginController(DesktopContext db)
+        private readonly ISection _section;
+
+        public LoginController(DesktopContext db, ISection section)
         {
             _dbContext = db;
+            _section = section;
         }
 
 		public IActionResult Index()
 		{
+            if (_section.SearchUser() != null) return RedirectToAction("Index", "Home");
+
             return View();
 		}
 
         public Usuario BuscarLogin(string? email)
         {
+#pragma warning disable CS8603 // Possível retorno de referência nula.
             return _dbContext.Usuarios.FirstOrDefault(x => x.Email.ToUpper() == email.ToUpper());
+#pragma warning restore CS8603 // Possível retorno de referência nula.
+        }
+
+        public IActionResult Leave()
+        {
+            _section.RemoveUserSection();
+            return RedirectToAction("Index", "Login");
         }
 
         [HttpPost]
-        public IActionResult Entrar(Usuario Usuarios)
+        public IActionResult Entrar(Usuario ModelUsuarios)
         {
 			try
 			{
                 if (ModelState.IsValid)
                 {
-                    Usuario user = BuscarLogin(Usuarios.Email);
-                    if(user != null)
+                    Usuario Usuario = BuscarLogin(ModelUsuarios.Email);
+                    if(Usuario != null)
                     {
-                        if(Usuarios.ValidatePassword(Usuarios.Senha))
+                        if(Usuario.ValidatePassword(ModelUsuarios.Senha))
                         {
+                            _section.CreateUserSection(Usuario);
                             return RedirectToAction("Index","Home");
                         }
                         TempData["Messagem de erro"] = $"Erro senha Incorreta";

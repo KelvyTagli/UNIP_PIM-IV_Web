@@ -1,4 +1,5 @@
 using PIM_IV_Web.Models;
+using PIM_IV_Web.Sections;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<DesktopContext>();
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+builder.Services.AddScoped<ISection, SectionClass>();
+
+builder.Services.AddSession(o =>
+{
+	o.Cookie.HttpOnly = true;
+	o.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
 
@@ -23,6 +34,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
 	name: "default",

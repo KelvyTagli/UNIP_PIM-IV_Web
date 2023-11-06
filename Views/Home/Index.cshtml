@@ -4,5 +4,19 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+	<div class="dashboard">
+		<div>
+			<h1>Visão geral</h1>
+			<div id="search">
+				<ion-icon name="search-outline"></ion-icon>
+				<input type="text" placeholder="Pesquisar">
+			</div>
+		</div>
+		<div class="graficos">
+			<i class="ph-thin ph-currency-circle-dollar" style="font-size:50px;"></i>
+			<h3>Ganhos mensais</h3>
+			<canvas id="myChart"></canvas>
+		</div>
+	</div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

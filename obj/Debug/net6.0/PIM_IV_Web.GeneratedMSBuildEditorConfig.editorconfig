@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\kelvy\OneDrive\Documentos\Faculdade\PIM\PIM_IV_Web\PIM_IV_Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/kelvy/OneDrive/Documentos/Faculdade/PIM/PIM_IV_Web/PIM_IV_Web/Views/BdHora/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmRIb3JhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kelvy/OneDrive/Documentos/Faculdade/PIM/PIM_IV_Web/PIM_IV_Web/Views/Holerites/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9sZXJpdGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/kelvy/OneDrive/Documentos/Faculdade/PIM/PIM_IV_Web/PIM_IV_Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/kelvy/OneDrive/Documentos/Faculdade/PIM/PIM_IV_Web/PIM_IV_Web/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kelvy/OneDrive/Documentos/Faculdade/PIM/PIM_IV_Web/PIM_IV_Web/Views/Shared/Components/Menu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/kelvy/OneDrive/Documentos/Faculdade/PIM/PIM_IV_Web/PIM_IV_Web/Views/Shared/Error.cshtml]

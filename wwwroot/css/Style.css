@@ -22,7 +22,7 @@ body {
     background-color: #201F1F;
 }
 
-.sidebar, .sidebar-left {
+.sidebar, .sidebar-right {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,17 +33,18 @@ body {
     border: 1px solid var(--border);
 }
 
-    .sidebar img, .sidebar-left img {
+    .sidebar img, .sidebar-right img {
         margin-top: 25px;
         width: 40%;
     }
 
-    .sidebar-left img {
-        border: 5px double #4f4f4fce;
-        width: 120px;
-        height: 120px;
-        border-radius: 80px;
-    }
+
+.sidebar-left img {
+    border: 5px double #4f4f4fce;
+    width: 120px;
+    height: 120px;
+    border-radius: 80px;
+}
 
 .leave {
     margin-top: auto;
@@ -62,7 +63,7 @@ i {
     color: var(--primary);
 }
 
-.sidebar a, .sidebar-left a {
+.sidebar a, .sidebar-right a {
     display: flex;
     width: 90%;
     margin-left: 20px;
@@ -71,7 +72,7 @@ i {
     padding: 4px 10px;
 }
 
-.sidebar-left div:first-child {
+.sidebar-right div:first-child {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +81,7 @@ i {
     border-bottom: 1px solid #4f4f4fce;
 }
 
-.sidebar-left div:last-child {
+.sidebar-right div:last-child {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,21 +229,23 @@ canvas {
         padding-bottom: 5px;
     }
 
-.holerite {
+.holerite 
+{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    gap: 3em;
+    gap: 5em;
     max-width: 100%;
     padding: 10px;
 }
 
-    .holerite div:first-child {
+
+.holerite div:first-child {
         display: flex;
         width: 100%;
         justify-content: space-between;
         gap: 10px;
-    }
+}
 
 .perfil {
     display: flex;

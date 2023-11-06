@@ -14,15 +14,15 @@
     <div class="container">
         <div class="sidebar">
             <img src="imagens/Icon monkey.png" />
-            <a href="" id="dashboard">
+            <a id="dashboard" asp-controller="Home" asp-action="Index">
                 <i class="fi fi-ts-chart-line-up"></i>
                 <span>Visão geral</span>
             </a>
-            <a href="" id="bancoHora">
+            <a id="bancoHora" asp-controller="BdHora" asp-action="Index">
                 <i class="fi fi-ts-clock-five"></i>
                 <span>Banco de horas</span>
             </a>
-            <a href="" id="folhaPagamento">
+            <a id="folhaPagamento" asp-controller="Holerites" asp-action="Index">
                 <i class="fi fi-ts-hand-holding-usd"></i>
                 <span>Folha de pagamento</span>
             </a>
@@ -30,7 +30,7 @@
                 <ion-icon name="settings-outline"></ion-icon>
                 <span>Configurações</span>
             </a>
-            <a href="" class="leave">
+            <a class="leave" asp-controller="Login" asp-action="Leave" >
                 <i class="fi fi-rs-exit"></i>
                 <span>Sair</span>
             </a>
@@ -38,24 +38,7 @@
         <main role="main">
             @RenderBody()
         </main>
-        <aside class="sidebar-left">
-            <div>
-                <img src="imagens/Foto de perfil.png" />
-                <h3></h3>
-                <span>Diretor geral</span>
-            </div>
-            <h3>Informações</h3>
-            <a>
-                <i class="fi fi-ts-envelopes"></i>
-                <p></p>
-            </a>
-            <a>
-                <i class="fi fi-ts-phone-call"></i>
-                <p>(11) 8923-9023</p>
-            </a>
-            <div>
-            </div>
-        </aside>
+        @await Component.InvokeAsync("Menu")
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
