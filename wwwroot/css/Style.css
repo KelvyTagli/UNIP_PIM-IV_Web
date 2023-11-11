@@ -234,7 +234,7 @@ canvas {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    gap: 5em;
+    gap: 4em;
     max-width: 100%;
     padding: 10px;
 }
@@ -242,9 +242,8 @@ canvas {
 
 .holerite div:first-child {
         display: flex;
-        width: 100%;
         justify-content: space-between;
-        gap: 10px;
+        gap: 5px;
 }
 
 .perfil {
@@ -263,8 +262,8 @@ canvas {
     }
 
     .perfil img {
-        width: 75px;
-        height: 75px;
+        width: 80px;
+        height: auto;
     }
 
     .perfil div:first-child {
@@ -282,7 +281,6 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
     border: none;
 }
 
@@ -309,11 +307,6 @@ th, td {
         justify-content: end;
         gap: 4px;
     }
-
-
-.hide, .hideBanco, .hideFolha {
-    display: none;
-}
 
 @media (min-width: 768px) {
     html {

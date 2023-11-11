@@ -9,8 +9,19 @@
 		</div>
 	</div>
 	<div class="perfil">
-		<div asp-action="Index" asp-controller="DesktopContext">
-			<img src="./img/Icon monkey.png" />
+		<div>
+			@{
+				if(Model.Funcionario.ImagemFuncionario != null)
+				{
+					var base64 = Convert.ToBase64String(Model.Funcionario.ImagemFuncionario);
+					var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+					<img src="@imgSrc" />
+				} 
+				else
+				{
+					<img src="~/img/image-removebg-preview.png"/>
+				}
+			}
 			<div id="info">
 				<h3>@Model.Funcionario.NomeCompleto</h3>
 				<p>@Model.Funcionario.Email</p>
@@ -36,7 +47,6 @@
 			<tr>
 				<th>Codigo</th>
 				<th>Descrição</th>
-				<th>Referência</th>
 				<th>Vencimento</th>
 				<th>Descontos</th>
 			</tr>
@@ -45,28 +55,24 @@
 			<tr>
 				<td>1</td>
 				<td>SALARIO</td>
-				<td>0.00</td>
 				<td>@Model.SalarioBruto</td>
 				<td>R$ 0.00</td>
 			</tr>
 			<tr>
 				<td>2</td>
 				<td>INSS</td>
-				<td>*7,5</td>
 				<td></td>
 				<td>R$ @Model.Inss</td>
 			</tr>
 			<tr>
 				<td>3</td>
 				<td>FGTS</td>
-				<td>*8.0</td>
 				<td></td>
 				<td>R$ @Model.Fgts</td>
 			</tr>
 			<tr>
 				<td>4</td>
 				<td>VALE TRANSPORTE</td>
-				<td>22</td>
 				<td></td>
 				<td>R$ @Model.OutrosDescontos</td>
 			</tr>

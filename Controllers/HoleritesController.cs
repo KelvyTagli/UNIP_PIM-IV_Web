@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using PIM_IV_Web.Models;
+using System.Drawing;
 
 namespace PIM_IV_Web.Controllers
 {
@@ -35,7 +36,7 @@ namespace PIM_IV_Web.Controllers
 			var holerite = holeriteID(ID);
 			return View(holerite);
 		}
-	
+
 		public IActionResult Index()
 		{
 			string SessionUser = HttpContext.Session.GetString("LoggedUserSession");

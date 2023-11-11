@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wzd/F1UNhDw/4x0uGCFD+hb+d2bylMlIremf/PDdQW8=",
+  "Hash": "PimdCOtyMSe+qoKZdpEsfK12/7NB8W/wr8fgI+XrJKw=",
   "Source": "PIM_IV_Web",
   "BasePath": "_content/PIM_IV_Web",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Icon monkey.png"
+    },
+    {
+      "Identity": "C:\\Users\\kelvy\\OneDrive\\Documentos\\Faculdade\\PIM\\PIM_IV_Web\\PIM_IV_Web\\wwwroot\\img\\image-removebg-preview.png",
+      "SourceId": "PIM_IV_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kelvy\\OneDrive\\Documentos\\Faculdade\\PIM\\PIM_IV_Web\\PIM_IV_Web\\wwwroot\\",
+      "BasePath": "_content/PIM_IV_Web",
+      "RelativePath": "img/image-removebg-preview.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\image-removebg-preview.png"
     },
     {
       "Identity": "C:\\Users\\kelvy\\OneDrive\\Documentos\\Faculdade\\PIM\\PIM_IV_Web\\PIM_IV_Web\\wwwroot\\img\\istockphoto-1279105333-612x612.jpg",
