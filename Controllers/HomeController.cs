@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using PIM_IV_Web.Models;
+using System.Data;
 using System.Diagnostics;
 using System.Web.Helpers;
 
@@ -23,9 +24,15 @@ namespace PIM_IV_Web.Controllers
             return _dbContext.Funcionarios.FirstOrDefault(info => info.UsuarioId == ID);
         }
 
-        public Holerite holeriteID(int ID)
+        public Holerite holeriteID(int Id)
         {
-            return _dbContext.Holerites.FirstOrDefault(holerite => holerite.FuncionarioId == ID);
+            return _dbContext.Holerites.FirstOrDefault(info => info.FuncionarioId == Id);
+        }
+
+        public IActionResult View(int Id)
+        {
+            var dados = holeriteID(Id);
+            return View(dados);
         }
 
         public IActionResult Index()
@@ -37,10 +44,9 @@ namespace PIM_IV_Web.Controllers
             Usuario usuario = JsonConvert.DeserializeObject<Usuario>(SessionUser);
 
             var info = FuncionarioID(usuario.UsuarioId);
-            var IDFuncionario = FuncionarioID(info.UsuarioId);
-            var dados = holeriteID(IDFuncionario.FuncionarioId);
+            View(info.FuncionarioId);
 
-            return View(dados);
+            return View();
 		}
 	}
 }

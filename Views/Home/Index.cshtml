@@ -1,7 +1,6 @@
 ﻿@model Holerite
 @{
     ViewData["Title"] = "Home Page";
-    
 }
 
 <div class="text-center">
@@ -22,8 +21,8 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    var salario = '@Model.SalarioLiquido';
-
+    let SalarioLiquido = ['@Model.SalarioLiquido'];
+    console.log(SalarioLiquido);
     const ctx = document.getElementById('myChart');
     new Chart(ctx, {
         type: 'line',
@@ -31,7 +30,7 @@
             labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
             datasets: [{
                 label: ' Salário',
-                data: [parseFloat(salario)],
+                data: [parseFloat(SalarioLiquido)],
                 borderWidth: 1,
                 borderColor: '#f8f9fc',
                 tension: 0.1,
